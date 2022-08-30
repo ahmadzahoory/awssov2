@@ -1,0 +1,11 @@
+#!/bin/bash
+# Install Apache Web Server
+yum install -y httpd
+
+# Turn on web server
+systemctl enable httpd.service
+systemctl start  httpd.service
+
+# Download App files
+wget https://raw.githubusercontent.com/ahmadzahoory/awssov2/master/code-m02.zip
+unzip code-m02.zip -d /var/www/html/
